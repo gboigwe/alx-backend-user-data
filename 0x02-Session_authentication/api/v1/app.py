@@ -2,11 +2,11 @@
 """Route module for the API"""
 
 
-import os
-from os import getenv
 from api.v1.views import app_views
 from flask import Flask, jsonify, abort, request
 from flask_cors import (CORS, cross_origin)
+import os
+from os import getenv
 
 
 app = Flask(__name__)
@@ -58,7 +58,7 @@ def before_request() -> str:
     if auth is None:
         return
 
-    excluded_paths = ['/api/v1/status',
+    excluded_paths = ['/api/v1/status/',
                       '/api/v1/unauthorized/',
                       '/api/v1/forbidden/',
                       '/api/v1/auth_session/login/']
