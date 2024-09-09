@@ -8,7 +8,6 @@ from models.base import Base
 class UserSession(Base):
     """The class for the user session"""
 
-
     def __init__(self, *args: list, **kwargs: dict):
         """Method to initialize the user session"""
 
